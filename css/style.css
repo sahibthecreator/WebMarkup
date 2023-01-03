@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Notable&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -32,6 +33,7 @@ body {
     color: #D40E14;
     font-size: 50px;
     padding-top: 15px;
+    letter-spacing: 1px;
 }
 
 #payoff {
@@ -56,10 +58,15 @@ nav ul li a {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    text-transform: uppercase;
 }
 
 nav li a:hover {
     color: rgb(153, 75, 231);
+}
+nav li a.selected {
+    font-weight: 900;
+    color: hsl(270, 76%, 60%);
 }
 
 .article {
@@ -90,6 +97,12 @@ nav li a:hover {
 
 .indexText {
     font-size: 17px;
+    text-indent: 20px;
+}
+.indexText::first-letter {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: brown;
 }
 
 .readMoreCTA {
@@ -120,6 +133,7 @@ nav li a:hover {
     margin-left: 3%;
     margin-top: 100px;
 }
+
 
 .imageContainer {
     max-width: 50%;
@@ -236,10 +250,14 @@ nav li a:hover {
 .pricingTable table {
     border-collapse: collapse;
     font-size: 0.9em;
-    font-family: sans-serif;
+    font-family: 'Notable', sans-serif;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
     margin: 0 10px 10px 0;
+    border-width: 1px;
+    border-style: double;
+    border-color: #000000;
 }
+.pricingTable table tr:nth-child(even) {background-color: #CFF;}
 
 .pricingTable table thead tr {
     background-color: #009879;
